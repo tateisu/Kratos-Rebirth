@@ -32,11 +32,12 @@
   <link rel="alternate" href="atom.xml" type="application/atom+xml">
   <!-- 样式表文件 -->
   <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="hiighlight-css" href="/css/highlight.min.css" type="text/css" media="all">
   <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
   <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
-  
+  <!-- 
 <link rel="stylesheet" href="/css/ext.css">
-
+ -->
   
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
@@ -387,33 +388,33 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
         </a>
     </div>
     <script type="text/javascript">
-        $(function(){
-            const qrcode = new QRCode("wechat-qr", {
+        $(()=>{
+            new QRCode("wechat-qr", {
                 text: "https://kr-demo.candinya.com/posts/markdown/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
             });
-            function share(dest){
-                const qqShareURL="http://connect.qq.com/widget/shareqq/index.html?";
-                const weiboShareURL="http://service.weibo.com/share/share.php?";
-                const qzoneShareURL="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
-                const facebookShareURL="https://www.facebook.com/sharer/sharer.php?";
-                const twitterShareURL="https://twitter.com/intent/tweet?";
-                const host_url="https://kr-demo.candinya.com/posts/markdown/";
-                const title="【Markdown Style test】";
-                const excerpt="This post is originated from here and is used for testing markdown style. This post contains nearly every markdown usage. Make sure all the markdown elements below show up correctly.";
-                let _URL;
-                switch (dest) {
-                    case "qq"       : _URL = qqShareURL+"url="+host_url+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
-                    case "weibo"    : _URL = weiboShareURL+"url="+host_url+"&title="+title+excerpt;                                 break;
-                    case "qzone"    : _URL = qzoneShareURL+"url="+host_url+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
-                    case "facebook" : _URL = facebookShareURL+"u="+host_url;                                                        break;
-                    case "twitter"  : _URL = twitterShareURL+"text="+title+excerpt+"&url="+host_url;                                break;
-                }
-                window.open(_URL);
-            }
         });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://kr-demo.candinya.com/posts/markdown/";
+            const title         = "「Markdown Style test」";
+            const excerpt       = `This post is originated from here and is used for testing markdown style. This post contains nearly every markdown usage. Make sure all the markdown elements below show up correctly.`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
     </script>
 </div>
                     
@@ -425,7 +426,7 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
                         <a class="tag-link" href="/tags/Bar/" rel="tag">Bar</a>, <a class="tag-link" href="/tags/Foo/" rel="tag">Foo</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2020-07-08</span>
+                    <span>最后编辑：2020-07-10</span>
                     </div>
                 </div>
             </footer>
@@ -449,10 +450,9 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
 </section>
 </div>
         
-            <aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
-                <div id="sidebar">
-                    
-                        <aside id="kratos-about" class="widget widget-kratos-about clearfix">
+            <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+                
+                    <aside id="krw-about" class="widget widget-kratos-about clearfix">
     
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
@@ -466,28 +466,28 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
         
     </div>
 </aside>
+                
+                    <!-- Moved to about.ejs -->
+                
                     
-                        <!-- Moved to about.ejs -->
-                    
-                        
-  <aside id="categories-2" class="widget widget_categories clearfix">
+  <aside id="krw-categories" class="widget widget-categories clearfix">
     <h4 class="widget-title">分类目录</h4>
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Foo/">Foo</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Foo/Bar/">Bar</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Foo/Bar/Baz/">Baz</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
   </aside>
 
 
+                
                     
-                        
-  <aside id="kratos_tags-2" class="widget widget-kratos-tags clearfix">
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title">标签聚合</h4>
-      <div class="tag_clouds">
+      <div class="tag-clouds">
         <a href="/tags/Bar/" style="font-size: 0.8em;">Bar</a> <a href="/tags/Baz/" style="font-size: 0.6em;">Baz</a> <a href="/tags/Foo/" style="font-size: 0.8em;">Foo</a>
       </div>
   </aside>
 
+                
                     
-                        
-  <aside class="widget widget-kratos-poststab">
+  <aside id="krw-posts" class="widget widget-kratos-poststab">
   <h4 class="widget-title">最新文章</h4>
   <div class="tab-content">
       <ul class="list-group">
@@ -506,9 +506,8 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
   </div>
   </aside>
 
-                    
-                </div>
-            </aside>
+                
+            </section>
         
         </div>
     </div>
@@ -541,7 +540,7 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
                     <ul class="kratos-social-icons">
                         
                         
-                        <li><a target="_blank" rel="nofollow" href="https://t.me/Candinya"><i class="fa fa-telegram"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
                         <li><a target="_blank" rel="nofollow" href="https://twitter.com/Candiinya"><i class="fa fa-twitter"></i></a></li>
                         
                         
