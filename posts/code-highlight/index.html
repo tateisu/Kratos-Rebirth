@@ -23,10 +23,10 @@
 <meta property="og:url" content="https://kr-demo.candinya.com/posts/code-highlight/index.html">
 <meta property="og:site_name" content="Kratos-Rebirth">
 <meta property="og:description" content="Make sure all the code blocks highlighted correctly. All the code samples are come from the demo of https:&#x2F;&#x2F;highlightjs.org">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale">
 <meta property="og:image" content="https://cn.gravatar.com/avatar/a7f9e15fef26e0a540edc977e21cb3eb">
 <meta property="article:published_time" content="2019-07-25T16:43:00.000Z">
-<meta property="article:modified_time" content="2020-08-17T16:45:52.925Z">
+<meta property="article:modified_time" content="2020-08-23T03:02:31.503Z">
 <meta property="article:author" content="Candinya">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cn.gravatar.com/avatar/a7f9e15fef26e0a540edc977e21cb3eb">
@@ -51,7 +51,7 @@
     <script async src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
   
   
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.1.0"></head>
 <body class="custom-background">
     <div id="kratos-wrapper">
         <div id="kratos-page">
@@ -102,7 +102,7 @@
     <!-- <div class="kratos-overlay"></div> -->
     <div class="kratos-cover kratos-cover-2 text-center">
         <div class="desc desc2 animate-box">
-            <a href="/"><h2>Kratos-Rebirth</h2><br><span>A demo site of theme Kratos Rebirth</span></a>
+            <a href="/"><h2>Kratos-Rebirth</h2><br><span>A demo site of theme Kratos Rebirth &#39;&#39;</span></a>
         </div>
     </div>
 </div>
@@ -158,7 +158,7 @@
 
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The Greeter class</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(name)</span></span></span><br><span class="line">    @name = name.capitalize</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">salute</span></span></span><br><span class="line">    puts <span class="string">&quot;Hello <span class="subst">#&#123;@name&#125;</span>!&quot;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">g = Greeter.new(<span class="string">&quot;world&quot;</span>)</span><br><span class="line">g.salute</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Makefile</span></span><br><span class="line"></span><br><span class="line">BUILDDIR      = _build</span><br><span class="line">EXTRAS       ?= <span class="variable">$(BUILDDIR)</span>/extras</span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="meta-keyword">.PHONY</span>: main clean</span></span><br><span class="line"></span><br><span class="line"><span class="section">main:</span></span><br><span class="line">    @echo <span class="string">&quot;Building main facility...&quot;</span></span><br><span class="line">    build_main <span class="variable">$(BUILDDIR)</span></span><br><span class="line"></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -rf <span class="variable">$(BUILDDIR)</span>/*</span><br></pre></td></tr></table></figure>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Makefile</span></span><br><span class="line"></span><br><span class="line">BUILDDIR      = _build</span><br><span class="line">EXTRAS       ?= <span class="variable">$(BUILDDIR)</span>/extras</span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="meta-keyword">.PHONY</span>: main clean</span></span><br><span class="line"></span><br><span class="line"><span class="section">main:</span></span><br><span class="line">	@echo <span class="string">&quot;Building main facility...&quot;</span></span><br><span class="line">	build_main <span class="variable">$(BUILDDIR)</span></span><br><span class="line"></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -rf <span class="variable">$(BUILDDIR)</span>/*</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">float64</span>)</span><br><span class="line">    ch &lt;- <span class="number">1.0e10</span>    <span class="comment">// magic number</span></span><br><span class="line">    x, ok := &lt;- ch</span><br><span class="line">    <span class="keyword">defer</span> fmt.Println(<span class="string">`exitting now\`</span>)</span><br><span class="line">    <span class="keyword">go</span> <span class="built_in">println</span>(<span class="built_in">len</span>(<span class="string">&quot;hello world!&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -254,7 +254,7 @@
                         
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2020-08-17</span>
+                    <span>最后编辑：2020-08-23</span>
                     </div>
                 </div>
             </footer>
@@ -286,7 +286,7 @@
     </div>
     <div class="textwidget">
         
-            <p class="text-center">A demo site of theme Kratos Rebirth</p>
+            <p class="text-center">A demo site of theme Kratos Rebirth ''</p>
         
     </div>
 </aside>
