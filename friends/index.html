@@ -130,21 +130,21 @@
             <div class="kratos-post-content">
                 <h2 class="title-h2 text-center">好伙伴们</h2>
                 <div class="linkpage">
-                    <ul id="friendsList"></ul>
-                </div>
+    <ul id="friendsList"></ul>
+</div>
 
-                <script type="text/javascript">
-                {
-                    const flist = JSON.parse(`[{"name":"猫猫①号","bio":"喵~","avatar":"/images/avatar.png","link":"#"},{"name":"猫猫②号","bio":"喵喵~","avatar":"/images/avatar.png","link":"#"},{"name":"猫猫⑨号","bio":"咪啪~","avatar":"/images/avatar.png","link":"#"}]`);
-                    let friendNodes = '';
-                    while (flist.length > 0) {
-                        const rndNum = Math.floor(Math.random()*flist.length);
-                        friendNodes += `<li><a target="_blank" href="${flist[rndNum].link}"><img src="${flist[rndNum].avatar}"><h4>${flist[rndNum].name}</h4><p>${flist[rndNum].bio}</p></a></li>`;
-                        flist.splice(rndNum, 1);
-                    }
-                    document.getElementById("friendsList").innerHTML = friendNodes;
-                }
-                </script>
+<script type="text/javascript">
+{
+    const flist = JSON.parse(`[{"name":"猫猫①号","bio":"喵~","avatar":"/images/avatar.png","link":"#"},{"name":"猫猫②号","bio":"喵喵~","avatar":"/images/avatar.png","link":"#"},{"name":"猫猫⑨号","bio":"咪啪~","avatar":"/images/avatar.png","link":"#"}]`);
+    let friendNodes = '';
+    while (flist.length > 0) {
+        const rndNum = Math.floor(Math.random()*flist.length);
+        friendNodes += `<li><a target="_blank" href="${flist[rndNum].link}"><img src="${flist[rndNum].avatar}"><h4>${flist[rndNum].name}</h4><p>${flist[rndNum].bio}</p></a></li>`;
+        flist.splice(rndNum, 1);
+    }
+    document.getElementById("friendsList").innerHTML = friendNodes;
+}
+</script>
             </div>
             <footer class="kratos-entry-footer clearfix">
                 <div class="footer-tag clearfix">
@@ -181,7 +181,6 @@
         
     </article>
 </section>
-
         </div>
                 
             <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
