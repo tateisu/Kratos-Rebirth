@@ -1777,6 +1777,11 @@ th {
   color: #e6162d
 }
 
+.kratos-entry-footer .post-like-donate .mastodon {
+  border-color: #2B90D9;
+  color: #2B90D9
+}
+
 .kratos-entry-footer .post-like-donate .twitter {
   border-color: #55acee;
   color: #55acee
@@ -1801,6 +1806,10 @@ th {
 
 .kratos-entry-footer .post-like-donate .weibo:hover {
   background-color: #e6162d
+}
+
+.kratos-entry-footer .post-like-donate .mastodon:hover {
+  background-color: #2B90D9
 }
 
 .kratos-entry-footer .post-like-donate .twitter:hover {

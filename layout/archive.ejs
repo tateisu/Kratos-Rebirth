@@ -54,7 +54,7 @@
                                     <% if (post.link) { %>
                                       <a class="post-title-link post-title-link-external" target="_blank" href="<%- url_for(post.link) %>" itemprop="url">
                                         <%- post.title %>
-                                        <i class="fa fa-external-link"></i>
+                                        <i class="fas fa-external-link"></i>
                                       </a>
                                     <% } else { %>
                                         <a class="post-title-link" href="<%- url_for(post.path) %>" itemprop="url">
@@ -80,7 +80,7 @@
             </div>
             <% if (page.total > 1) { %>
               <div class='text-center pagination'>
-              <%- paginator({prev_text: '<i class="fa fa-angle-left"></i>', next_text: '<i class="fa fa-angle-right"></i>', escape: false}) %>
+              <%- paginator({prev_text: '<i class="fas fa-angle-left"></i>', next_text: '<i class="fas fa-angle-right"></i>', escape: false}) %>
               </div>
             <% } %>
         </article>

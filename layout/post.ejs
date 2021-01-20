@@ -8,10 +8,10 @@
                 <% } %>
                 <div class="kratos-post-meta text-center">
                     <span<% if (theme.posts.comments === 'valine' && theme.valine.visitor) { %> id="<%- url_for(page.path) %>" class="leancloud_visitors" data-flag-title="<%- page.title %>"<% } %>>
-                        <i class="fa fa-calendar"></i> <%- date(page.date, null) %>
-                        <i class="fa fa-folder"></i> <%- __('category') %> <%- list_categories(page.categories, {show_count: false, class: 'label', style: 'none'}) %>
-                        <i class="fa fa-user"></i> <%- __('author') %> <%- page.author || config.author %>
-                        <i class="fa fa-edit"></i> 
+                        <i class="fas fa-calendar"></i> <%- date(page.date, null) %>
+                        <i class="fas fa-folder"></i> <%- __('category') %> <%- list_categories(page.categories, {show_count: false, class: 'label', style: 'none'}) %>
+                        <i class="fas fa-user"></i> <%- __('author') %> <%- page.author || config.author %>
+                        <i class="fas fa-edit"></i> 
                         <% const wordsCount = strip_html(page.content).length; %>
                         <% if (wordsCount < 1500) { %>
                             <%= wordsCount %>
@@ -20,7 +20,7 @@
                         <% } %>
                         字
                         <% if (theme.posts.comments === 'valine' && theme.valine.visitor) { %>
-                            <i class="fa fa-eye"></i> <%- __('read_count', '<span class="leancloud-visitors-count"></span>') %>
+                            <i class="fas fa-eye"></i> <%- __('read_count', '<span class="leancloud-visitors-count"></span>') %>
                         <% } %>
                     </span>
                 </div>
@@ -46,17 +46,17 @@
                 <% if (theme.posts.donate || theme.posts.share) { %>
                     <div class="post-like-donate text-center clearfix" id="post-like-donate">
                     <% if (theme.posts.donate) { %>
-                        <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> <%- __('reward') %></a>
+                        <a class="donate" href="javascript:;"><i class="fas fa-bitcoin"></i> <%- __('reward') %></a>
                     <% } %>
                     <% if (theme.posts.share) { %>
-                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> <%- __('share') %></a>
+                        <a class="share" href="javascript:;"><i class="fas fa-share-alt"></i> <%- __('share') %></a>
                         <%- partial('_tools/share', {page: page}) %>
                     <% } %>
                     </div>
                 <% } %>
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
-                    <i class="fa fa-tags"></i>
+                    <i class="fas fa-tags"></i>
                         <%- list_tags(page.tags, {
                             show_count: false,
                             style: 'none'
