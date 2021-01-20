@@ -1,0 +1,31 @@
+category: カテゴリ
+categories: カテゴリ
+read_more: もっと読む
+read_full: 全文を読む
+search: 検索
+search_notice: 何を探しますか?
+search_submit: 見つける
+search_notice_page: 検索エンジンは %s です
+search_notice_keys: 「%s 」など、複数のキーワードを検索する場合はスペースを使用してください。
+search_notice_tags: これらのタグを使って運試しをすることもできます。
+tag: タグ
+tagcloud: タグクラウド
+prev: 前のページ
+next: 次のページ
+comment: コメント
+archive: アーカイブ
+archive_count: "%d 件の記事"
+page: "%d ページ"
+recent_posts: 最近の投稿
+newer: 新しい方
+older: 古い方
+share: 共有
+rss_feed: RSSフィード
+copyright: copyright
+author: 著者
+read_count: "%s 回読む"
+last_modify: "更新日："
+last_modify_alert: "この記事は %s より後に更新されました。再読込が必要かもしれません。"
+reward: 褒賞
+no_title: 無題
+use_cc4_license: ""
