@@ -96,7 +96,7 @@ function createPosts(resArr) {
 function loadDataSearch(searchDataFile, skeys) {
     fetch(searchDataFile)
         .then((res)=>{
-            setNotice('success', '文件加载完成，开始搜索啦~');
+            setNotice('success', 'Load complete. Search function available.');
             if (typeof NProgress !== 'undefined') {
                 NProgress.inc();
             }
@@ -189,13 +189,13 @@ function loadDataSearch(searchDataFile, skeys) {
             });
             if (resultCount !== 0) {
                 const finishTime = performance.now();
-                setNotice('success', '找到 ' + resultCount + ' 条搜索结果，用时 ' + Math.round((finishTime - startTime)*100)/100 + ' 毫秒~');
+                setNotice('success', 'result count: ' + resultCount + ', processing time: ' + Math.round((finishTime - startTime)*100)/100 + ' seconds.');
                 resultArray.sort((a, b)=>{
                     return b[1] - a[1];
                 });
                 createPosts(resultArray);
             } else {
-                setNotice('danger', '什么都没有找到欸...');
+                setNotice('danger', 'not found.');
                 clearPosts();
             }
             if (typeof NProgress !== 'undefined') {
@@ -203,13 +203,13 @@ function loadDataSearch(searchDataFile, skeys) {
             }
         })
         .catch((error)=>{
-            setNotice('danger', '错误 : ' + error);
+            setNotice('danger', 'error: ' + error);
         });
 }
 
 function keySearch(skeys) {
     // 设置搜索提示
-    setNotice('info', '正在加载搜索文件...');
+    setNotice('info', 'Loading search data…');
 
     // 启动进度条
     if (typeof NProgress !== 'undefined') {

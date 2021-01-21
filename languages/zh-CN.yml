@@ -16,8 +16,8 @@ archive: 文章归档
 archive_count: 当前共有 %d 篇文章 (゜-゜)つロ 干杯~
 page: 第 %d 页
 recent_posts: 最新文章
-newer: 上一篇
-older: 下一篇
+next_post: 上一篇
+prev_post: 下一篇
 share: 分享
 rss_feed: RSS 订阅
 category: 分类

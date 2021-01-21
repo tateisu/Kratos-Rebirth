@@ -1648,7 +1648,8 @@ th {
   padding: 2px;
   border: 1px solid #f3f3f3;
   height: 145px;
-  width: 240px
+  width: 240px;
+  object-fit: contain;
 }
 
 .kratos-post-meta-new a i {
@@ -2216,7 +2217,7 @@ th {
 
 .widget-archive li::before,
 .widget-categories li::before {
-  font-family: fontawesome;
+  font-family: "Font Awesome 5 Free";
   font-size: 15px
 }
 
@@ -2233,7 +2234,7 @@ th {
 }
 
 .widget-categories li::before {
-  content: '\f114';
+  content: '\f07c';
   margin-right: 8px
 }
 
@@ -2559,7 +2560,8 @@ th {
     max-width: 100%;
     width: 750px;
     padding: 0;
-    border: 0
+    border: 0;
+    object-fit: contain;
   }
 
   .kratos-post-inner-new {
@@ -2926,7 +2928,8 @@ td.code {
   max-width: 100%;
   width: 750px;
   padding: 0;
-  border: 0
+  border: 0;
+  object-fit: contain;
 }
 
 /**************** Search Page related ****************/

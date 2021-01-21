@@ -70,14 +70,14 @@
         </div>
         <% if (page.prev || page.next) { %>
             <nav class="navigation post-navigation clearfix" role="navigation">
-                <% if (page.next) { %>
+                <% if (page.prev) { %>
                 <div class="nav-previous clearfix">
-                    <a title=" <% if (page.next.title){ %><%= page.next.title %><% } else { %>(<%- __('no_title') %>)<% } %>" href="<%- config.root + page.next.path %>">&lt; <%- __('newer') %></a>
+                    <a title=" <% if (page.prev.title){ %><%= page.prev.title %><% } else { %>(<%- __('no_title') %>)<% } %>" href="<%- config.root + page.prev.path %>">&lt; <%- __('prev_post') %></a>
                 </div>
                 <% } %>
-                <% if (page.prev) { %>
+                <% if (page.next) { %>
                 <div class="nav-next clearfix">
-                    <a title=" <% if (page.prev.title){ %><%= page.prev.title %><% } else { %>(<%- __('no_title') %>)<% } %>" href="<%- config.root + page.prev.path %>"><%- __('older') %> &gt;</a>
+                    <a title=" <% if (page.next.title){ %><%= page.next.title %><% } else { %>(<%- __('no_title') %>)<% } %>" href="<%- config.root + page.next.path %>"><%- __('next_post') %> &gt;</a>
                 </div>
                 <% } %>
             </nav>
