@@ -46,3 +46,4 @@ watch('src/**', parallel(minifycss, minifyjs));
 
 exports.build = parallel(minifycss, minifyjs);
 exports.default = parallel(minifycss, minifyjs);
+

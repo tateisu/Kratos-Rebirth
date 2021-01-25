@@ -1,20 +1,46 @@
+<%
+    var items = [];
+    var title = '';
+    var isTagIndex = page.type === 'tags' || page.type === 'tag';
+    var isCategoryIndex = page.type === 'categories' || page.type === 'category';
+    if (isTagIndex) {
+        items = site.tags.sort('name', 1);
+        title = __('tags');
+    } else if (isCategoryIndex) {
+        items = site.categories.sort('name', 1);
+        title = __('categories');
+    }
+%>
 <section class="col-md-8">
-    <article>
-        <div class="kratos-hentry kratos-post-inner clearfix">
-            <div class="kratos-post-content">
-                <h2 class="title-h2 text-center"><%- page.title %></h2>
-                <%- page.content %>
-            </div>
-            <footer class="kratos-entry-footer clearfix">
-                <div class="footer-tag clearfix">
-                    <div class="pull-date">
-                    <span><%- __('last_modify') %><%- date(page.updated) %></span>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <% if (theme.posts.comments && page.comments) { %>
-            <%- partial('_comments/' + theme.posts.comments) %>
-        <% } %>
-    </article>
+	<article>
+		<div class="kratos-hentry kratos-post-inner clearfix">
+			<div class="kratos-post-content">
+				<h2 class="title-h2 text-center"><%- page.title %></h2>
+				<% if (isTagIndex || isCategoryIndex) { 
+					items.forEach(function(item){
+						%><%- partial('_partial/tag-category-index', {item: item}) %><%
+					});
+				} else {  %>
+					<%- page.content %>
+				<% } %>
+			</div>
+			<% if (isTagIndex || isCategoryIndex) { %>
+				<div class="archive-before-pagination"></div>
+			<% } else { %>
+				<footer class="kratos-entry-footer clearfix">
+	                <div class="footer-tag clearfix">
+                	    <div class="pull-date">
+            	    	    <span><%- __('last_modify') %><%- date(page.updated) %></span>
+        	            </div>
+    	            </div>
+				</footer>
+			<% } %>
+	    </div>
+		<% if (isTagIndex || isCategoryIndex) { %>
+		<% } else { %>
+	        <% if (theme.posts.comments && page.comments) { %>
+	            <%- partial('_comments/' + theme.posts.comments) %>
+	        <% } %>
+		<% } %>
+	</article>
 </section>
