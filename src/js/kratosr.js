@@ -192,9 +192,9 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 -------------------------
 ${kr.copyrightNotice}
-作者：${document.querySelector("meta[name='author']").getAttribute('content')}
-来源：${document.title}
-链接：${window.location.href}
+Author：${document.querySelector("meta[name='author']").getAttribute('content')}
+Title：${document.title}
+Link：${window.location.href}
 `;
     }
 

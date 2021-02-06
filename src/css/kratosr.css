@@ -512,7 +512,6 @@ th {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-transform: uppercase;
   letter-spacing: 2px;
   -webkit-transition: .3s;
   transition: .3s
@@ -725,7 +724,6 @@ th {
 }
 
 .text-uppercase {
-  text-transform: uppercase
 }
 
 .text-capitalize {
@@ -1047,7 +1045,6 @@ th {
   height: 2.5px;
   color: #fff;
   font: 700 14px/.4 Helvetica;
-  text-transform: uppercase;
   text-indent: -55px;
   background: #fff;
   -webkit-transition: .2s;
@@ -2158,7 +2155,6 @@ th {
   margin: 3px 4px;
   padding: 4px 12px;
   border: 1px solid #f0f0f0;
-  text-transform: uppercase;
   line-height: 19px;
   background: rgba(251, 251, 251, .7);
   border-radius: 5px
