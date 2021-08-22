@@ -287,11 +287,13 @@ Link：${window.location.href}
     };
 
     const initTime = () => {
-        const createTime = new Date(kr.createTime);
         const upTimeNode = document.getElementById("span_dt");
-        setInterval(() => {
-            upTimeNode.innerText = getTimeString(Date.now() - createTime);
-        }, 1000);
+        if(upTimeNode){
+	        const createTime = new Date(kr.createTime);
+	        setInterval(() => {
+	            upTimeNode.innerText = getTimeString(Date.now() - createTime);
+	        }, 1000);
+		}
     };
 
     const codeCopyInit = () => {

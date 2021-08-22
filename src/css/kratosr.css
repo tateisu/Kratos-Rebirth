@@ -3027,3 +3027,11 @@ body.custom-background {
     background-image: url('/images/bg.webp')
   }
 }
+
+
+
+p.amazon img {
+	width:400px !important; 
+	height:200px !important; 
+	object-fit: contain !important; 
+}
